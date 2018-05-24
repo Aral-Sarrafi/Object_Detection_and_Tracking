@@ -8,6 +8,7 @@ With in this project a simple object detection and tracking pipeline is implemet
 ### 4. Sliding Window Approach
 ### 4. Objection Detection on Images
 ### 5. Object Detection on Video Stream
+### 6. Discussion
 
 In the next couple of paragraph each of the sections will be discussed in detail.
 
@@ -71,8 +72,11 @@ For all the different sub-regions of the image the same features will be extract
 
 ### 5. Object Detection on Video Stream
 
-The same procedure for object detection on images can be applied to the frames of a video. Moreover, in videos the detections from the previous frames can be used to improve the detection. In this implementation I applied a threshold on a heatmap for **15 frames** of the video to increace the accuracy of the pipeline. Other advance methods such as Kalman filter can be also added to the pipeline to increase the accuracy and to provide smooth tracking. Moreover, in videos the search area and windows can be selected based on the previous frames that can also increase the accuracu and reduce the pipeline response time.
+The same procedure for object detection on images can be applied to the frames of a video. Moreover, in videos the detections from the previous frames can be used to improve the detection. In this implementation I applied a threshold on a heatmap for **15 frames** of the video to increace the accuracy of the pipeline. Other advance methods such as Kalman filter can be also added to the pipeline to increase the accuracy and to provide smooth tracking. Moreover, in videos the search area and windows can be selected based on the previous frames that can also increase the accuracu and reduce the pipeline response time. The [My_result.avi](https://github.com/Aral-Sarrafi/Object_Detection_and_Tracking/blob/master/My_video.avi) and [test_reult.avi](https://github.com/Aral-Sarrafi/Object_Detection_and_Tracking/blob/master/test_result.avi) are some the results of the desgined pipeline for vehicle detection and tracking. The gif below also shows some the results obtained from this pipeline.
+
+<img src = "myvideo.gif" width = "400" hight = "400">
 
 
+### 6. Discussion
 
 
