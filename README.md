@@ -48,10 +48,9 @@ For object detection a sliding window approach was used. In the sliding window a
 
 **Scales = 1, 1.5, 2**
 
-**Overlap: 0.5 in X direction , 0.75 in Y direction**
-
 **Total number of Windows = 166**
 
 Figure below shows the different window that were used in the object detection pipeline.
 
+<img src = "./output_images/sliding_window.jpg">
 
