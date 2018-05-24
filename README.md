@@ -91,10 +91,13 @@ Within this project an object detection and tracking pipeline was implemented in
 
 The major challenge that I faced in this project was filtering the False-Positives. The False positives were handled by thresholding the heat map image and also filtering the detection with low detection confidence. For future work, some improvements can be considered for the pipeline:
 
-**1. Using other vehicle and non-vehicle data set to increase the generality of the trained SVM**
+**1. Using other vehicle and non-vehicle data set to increase the generality of the trained SVM.**
 
-**2. Adding a Kalman-Filter estimator to the video processing pipeline to make the predictions more accurate and smoother**
+**2. Adding a Kalman-Filter estimator to the video processing pipeline to make the predictions more accurate and smoother.**
 
 **3. Using more advanced features such as SIFT**
 
-**4. Deep Learning approaches can considered instead of SVM
+**4. A Decision tree can be used to achieve a better feature selection strategy.**
+
+**4. Deep approaches for object detection such as YOLO can be also studied.**
+
