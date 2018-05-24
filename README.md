@@ -18,7 +18,7 @@ The vehicle and non vehicle image data sets were used to train the SVM calssier.
 <img src = "./output_images/example.jpg" width = "500" hight = "400">
 
 ### 2. Feature Extraction
-One of the most important stages in a machine learning approach for object detection is feature extraction. Most ideal features should be invarient to ilumination, rotation, scale and translation. Often a combination of different features is poven to be more useful. With in this project I used 3 different features to train the SVM. The selected features are as follows:
+One of the most important stages in a machine learning approach for object detection is feature extraction. Most ideal features should be invarient to ilumination, rotation, scale and translation. Often a combination of different features is poven to be more useful. With in this project I used 3 different features to train the SVM. All the three different features were concatenated and then normalized. Normalization is an essential part to avoid other features with large elements to dominate the others .The selected features are as follows:
 
 **-Color histogram of all 3 channels of the YUV representation of the image**
 
@@ -29,5 +29,14 @@ One of the most important stages in a machine learning approach for object detec
 <img src = "./output_images/binspatial.jpg" width = "500" hight = "400">
 
 **-Histogram of Oriented Gradient (HOG) applied on the all 3 channels of YUV image** 
+The parameters for extracting the HOG features are as follows:
+
+**Orientation = 11**
+
+**Pixels Per Cell = 16**
+
+**Cells Per Block = 2**
 
 <img src = "./output_images/Hog.jpg" width = "500" hight = "400">
+
+
