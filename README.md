@@ -1,6 +1,6 @@
 # Vehicle Detection and Tracking
 
-Within this project a simple object detection and tracking pipeline is implemented to detect cars in a video stream. The outline of the project is as follows:
+Within this project a simple object detection and tracking pipeline is implemented to detect cars in a video stream. The implementation is available at [Object_Detection.ipynb](https://github.com/Aral-Sarrafi/Object_Detection_and_Tracking/blob/master/Object_Detection.ipynb).The outline of the project is as follows:
 
 ### 1. Data Visualization
 ### 2. Feature Extraction
