@@ -14,7 +14,7 @@ In the next couple of paragraph each of the sections will be discussed in detail
 
 ### 1. Data Visualization
 
-The vehicle and non vehicle image data sets were used to train the SVM calssier. This data set contains 8792 images of vehicles and 8968 non-vehicle images. All the images are RGB 64*64 images.The number samples per class in very close that garantees that the trained classifies will not be biased toward any of the classes. The figure below shows some example of images from this data set.
+The [**vehicle**](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles.zip) and [**non-vehicle**](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles.zip) image data sets were used to train the SVM calssier. This data set contains 8792 images of vehicles and 8968 non-vehicle images. All the images are RGB 64*64 images.The number samples per class in very close that garantees that the trained classifies will not be biased toward any of the classes. The figure below shows some example of images from this data set.
 
 <img src = "./output_images/example.jpg" width = "500" hight = "400">
 
@@ -68,6 +68,10 @@ For all the different sub-regions of the image the same features will be extract
 **Merging the Multiple Detections:** As mentioned earlier the objects will be detected in different overlapping windows, and the windows should be combined together to a single detection. This procedure can be also accomplished by a heatmap. Once the heatmap is formed the **label** function will operate on it. The label function checks for the connected sub-regions in the image based on connectivity matrix and generates the labels, which will be the final detection. Figure below shows the different stages of the vehicle detection.
 
 <img src = "./output_images/detection_process.jpg">
+
+Figure below shows the final detection results for the test images, as it is clear the pipeline is able to detect the vehicles in all the test images. This indicates that the pipeline might be able to detect the vehicles and track them in a video as well.
+
+<img src = "./output_images/final_detection.jpg">
 
 
 ### 5. Object Detection on Video Stream
