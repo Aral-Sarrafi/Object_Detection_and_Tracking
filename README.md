@@ -39,4 +39,19 @@ The parameters for extracting the HOG features are as follows:
 
 <img src = "./output_images/Hog.jpg" width = "500" hight = "400">
 
+### 3. Training the Support Vector Machine (SVM)
+After extracting the features and normalization a SVM classifier was trained. I used a **Linear SVM**. The data set was splited to **0.8** for training and **0.2** for testing. The accuracy of the classifier on the test images is **0.991**.
+
+### 4. Sliding Window Approach
+
+For object detection a sliding window approach was used. In the sliding window approach each sub-region of the image which is selected by the window will be resized to the correct format of the training data (64*64) and then the feature vector will be extracted. Afterward the classifier predicts a label for the selected sub-region. Different scale of windows were selected with respect to the training images size (64).
+
+**Scales = 1, 1.5, 2**
+
+**Overlap: 0.5 in X direction , 0.75 in Y direction**
+
+**Total number of Windows = 166**
+
+Figure below shows the different window that were used in the object detection pipeline.
+
 
