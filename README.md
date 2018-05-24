@@ -96,3 +96,5 @@ The major challenge that I faced in this project was filtering the False-Positiv
 **2. Adding a Kalman-Filter estimator to the video processing pipeline to make the predictions more accurate and smoother**
 
 **3. Using more advanced features such as SIFT**
+
+**4. Deep Learning approaches can considered instead of SVM
