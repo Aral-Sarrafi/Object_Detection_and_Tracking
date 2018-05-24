@@ -54,3 +54,25 @@ Figure below shows the different window that were used in the object detection p
 
 <img src = "./output_images/sliding_window.jpg">
 
+### 4. Objection Detection on Images
+
+For all the different sub-regions of the image the same features will be extracted and normalized, and then the SVM classifier predicts if the window contains a vehicle or not. This precedure is implemeted in the function **filter_windows**. Normally, the prediction will contain several **False-Positive** detections which needs to be filtered out. In order to filter the false-positive detections I used two different thresholding methods as follows:
+
+**1.Detection Confidence:** SVM makes the decisions based on the decision boundray or the hyperplane, and the False-Positive detections are normally have a small distance to this hyper plane. I used a threshold to filter-out some the Flase-Positives. (This method is embeded in the **filter_windows** function.
+
+**2. Heatmap threshold:** The heat map approach is serving for two porposes in this object detection pipeline. 
+
+**Filtering False Positives:** Normally the True-Positive detections are companied with couple of other detection from other windows, while the Flase-Positives are not. Therefore, applying a threshold on the heatmap can filter out the False-Positives.
+
+**Merging the Multiple Detections:** As mentioned earlier the objects will be detected in different overlapping windows, and the windows should be combined together to a single detection. This procedure can be also accomplished by a heatmap. Once the heatmap is formed the **label** function will operate on it. The label function checks for the connected sub-regions in the image based on connectivity matrix and generates the labels, which will be the final detection. Figure below shows the different stages of the vehicle detection.
+
+<img src = "./output_images/detection_process.jpg">
+
+
+### 5. Object Detection on Video Stream
+
+The same procedure for object detection on images can be applied to the frames of a video. Moreover, in videos the detections from the previous frames can be used to improve the detection. In this implementation I applied a threshold on a heatmap for **15 frames** of the video to increace the accuracy of the pipeline. Other advance methods such as Kalman filter can be also added to the pipeline to increase the accuracy and to provide smooth tracking. Moreover, in videos the search area and windows can be selected based on the previous frames that can also increase the accuracu and reduce the pipeline response time.
+
+
+
+
