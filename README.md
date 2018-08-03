@@ -1,5 +1,8 @@
 # Vehicle Detection and Tracking
 
+<img src = "Object_Detection.gif">
+
+
 Within this project a simple object detection and tracking pipeline is implemented to detect cars in a video stream. The implementation is available at [Object_Detection.ipynb](https://github.com/Aral-Sarrafi/Object_Detection_and_Tracking/blob/master/Object_Detection.ipynb).The outline of the project is as follows:
 
 ### 1. Data Visualization
@@ -82,7 +85,6 @@ Figure below shows the final detection results for the test images, as it is cle
 The same procedure for object detection on images can be applied to the frames of a video. Moreover, in videos the detections from the previous frames can be used to improve the detection. In this implementation I applied a threshold on a heat map for **15 frames** of the video to increase the accuracy of the pipeline. Other advance methods such as Kalman filter can be also added to the pipeline to increase the accuracy and to provide smooth tracking. Moreover, in videos the search area and windows can be selected based on the previous frames that can also increase the accuracy and reduce the pipeline response time. The [**My_result.avi**](https://github.com/Aral-Sarrafi/Object_Detection_and_Tracking/blob/master/My_result.avi) and [**test_reult.avi**](https://github.com/Aral-Sarrafi/Object_Detection_and_Tracking/blob/master/test_result.avi) are some the results of the designed pipeline for vehicle detection and tracking. The gif below also shows some the results obtained from this pipeline. There are some detections from the other lane (passing cars in the left lane), which can be filtered out by a better selection of search region and playing with threshold values.
 
 
-<img src = "myvideo.gif" width = "400" hight = "400">
 
 
 ### 6. Discussion
